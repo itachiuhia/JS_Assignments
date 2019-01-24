@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Alternate the Array</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style media="screen">
+      body{
+        margin: 10px;
+      }
+
+    </style>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <form class="" method="post">
+      <label>Enter the array1: </label> <input type="text" name="" value="" id='arr1'><br> <br>
+    <label>Enter the array2:  </label> <input type="text" name="" value="" id='arr2'>
+       <button type="button" name="button" onclick="mixArray()" class="btn btn-success">Alternate the Array</button>
+    </form>
+    <br><br>
+
+    <span id='res'></span>
+  </body>
+  <script type="text/javascript">
+    function mixArray(){
+      var a1= document.getElementById('arr1').value;
+      var a2 = document.getElementById('arr2').value;
+
+      var arr1 = a1.split(" ");
+      var arr2= a2.split(" ");
+      var res= firstTest(arr1,arr2);
+      var result="";
+      res.forEach(function(x){
+        console.log(x);
+        result += x+" ,";
+        console.log(result);
+      });
+      document.getElementById('res').innerHTML = result;
+    }
+    function firstTest(a,b) {
+        table = [];
+        for(var i=0;i<a.length;i++){
+          table.push(a[i]);
+          table.push(b[i]);
+        }
+
+        return table;
+    }
+  </script>
+</html>

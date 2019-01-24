@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Add two No</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style media="screen">
+      body{
+        margin: 10px;
+      }
+      button{
+        margin-top: 1px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 class="text-center display-3">--Add Two Number--</h1><br><br>
+    <form class="" method="post" class="form-group">
+    <div class="row">
+      <div class="col col-sm-2">
+        <input type="text" name="" value="" id='no1' placeholder="Enter the no1"><br><br>
+        <input type="text" name="" value="" id='no2' placeholder="Enter the no1"><br><br>
+
+      </div>
+      <div class="col col-sm-2">
+        <br><br>
+        <button type="button" name="button" onclick="check()" class="btn btn-success">Show Result</button>
+      </div>
+    </div>
+
+      <h1 id="res" class="display-5"></h1>
+    </form>
+  </body>
+  <script type="text/javascript">
+    function check(){
+      var no1 = document.getElementById('no1').value;
+      var no2 = document.getElementById('no2').value;
+      if (isNaN(no1) || isNaN(no2)) {
+        document.getElementById('res').innerHTML="Sorry.... Only Nos will be added";
+      } else {
+
+      window.alert(Number(no1)+Number(no2));
+      }
+    }
+  </script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+</html>

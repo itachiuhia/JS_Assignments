@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fibonacci</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style media="screen">
+    body{
+      margin: 10px;
+    }
+    div{
+      white-space:text-justify;
+
+      text-overflow: ellipsis;
+    }
+
+    </style>
+  </head>
+  <body>
+    <button type="button" name="button" onclick="fib()" class="btn btn-success">Generate Fibonacci No</button><br><br>
+    <div class="col col-lg-8">
+      <span id='res'></span>
+    </div>
+  </body>
+  <script type="text/javascript">
+
+    function fib(){
+      var a=0,b=1;
+      str =a+" "+ b+"   ";
+      for(var i=0;i<=98;i++){
+         q=a+b;
+         str += q +"   ";
+         a=b;
+         b=q;
+      }
+      document.getElementById('res').innerHTML = str;
+    }
+
+  </script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+</html>

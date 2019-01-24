@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create a variable using a user-defined name</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style media="screen">
+      body{
+        margin: 10px;
+      }
+      label{
+        margin-top: 5px;
+        margin-bottom: 20px;
+      }
+      p{
+        margin-top: 30px;
+      
+        color: mediumvioletred;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <div class="row">
+        <div class="col col-sm-2">
+          <label>Enter the variable name :</label>
+
+          <label>Enter the value of variable :</label>
+        </div>
+        <div class="col col-sm-4">
+          <input type="text" name="" value="" id='test1'><br><br>
+          <input type="text" id='test2' name="" value="">
+          <br><br>
+          <button type="button" name="button" onclick="generate()" class="btn btn-danger">Generate Variable</button>
+        </div>
+      </div>
+    </form>
+    <p class="text-center" id="res"></p>
+  </body>
+  <script type="text/javascript">
+  function generate(){
+    var vName = document.getElementById('test1').value;
+    var vValue = document.getElementById('test2').value;
+
+    this[vName] = vValue;
+    document.getElementById('res').innerHTML ="Variable Name: "+ vName+" created having value: "+vValue;
+
+  }
+  </script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+</html>

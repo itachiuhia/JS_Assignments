@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Try and Catch Block</title>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <input type="text" name="" value="" id="no1"><br><br>
+      <input type="text" id="no2" name="" value=""><br><br>
+      <button type="button" name="button" onclick="showRes()">Show Result</button><br>
+    </form><br>
+    <span id="res"></span>
+  </body>
+  <script type="text/javascript">
+    function showRes(){
+      var n1 = document.getElementById("no1").value;
+      var n2 = document.getElementById("no2").value;
+      try{
+  //      window.alert((n1/n2));
+        if(n2==0)
+          //  throw err;
+          throw new Error('Invalid dividend ' + n2);
+        document.getElementById("res").innerHTML = (n1/n2);
+      }catch(Error){
+        //window.alert("0");
+        document.getElementById("res").innerHTML = Error.message;
+      }
+
+    }
+  </script>
+</html>

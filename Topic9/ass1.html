@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Occurence Of Letter In a String</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style media="screen">
+      body{
+        margin: 10px;
+      }
+      input{
+        margin: 10px;
+      }
+    </style>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    Enter the Sring: <input type="text" name="" value="" id="str">
+    <br>
+    Enter The letter : <input type="text" name="" value="" id="ltr">
+    <br>
+    <button type="button" name="button" onclick="findOccur()" class="btn btn-danger">Find Occurence</button>
+
+    <br><br>
+    <p class="text-center" id="res"></p>
+  </body>
+
+  <script type="text/javascript">
+    function findOccur(x){
+      var str = document.getElementById("str").value;
+      var ltr = document.getElementById("ltr").value;
+
+      var count = 0;
+      for(var i=0; i<str.length; i++) {
+        if(str[i] === ltr) {
+          count++;
+        }
+      }
+    // var occur= str.split('ltr').length -1;
+  //  document.getElementById('res').innerHTML = (str.match(/x/gi).length);
+  document.getElementById('res').innerHTML= count;
+
+
+    }
+
+
+  </script>
+
+</html>

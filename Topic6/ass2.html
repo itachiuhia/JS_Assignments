@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style media="screen">
+      table, th, td {
+          border: 1px solid black;
+           border-collapse: collapse;
+           width: 10%;
+        }
+        td{
+          padding: 2px;
+          text-align: center;
+        }
+        body{
+          margin: 10px;
+        }
+        button{
+          border: none;
+          width: 100%;
+          background-color: #fff;
+        }
+    </style>
+  </head>
+  <body>
+    <table class="">
+      <tr >
+        <td colspan="3" style="padding:10px"><span id="show"> </span></td>
+      </tr>
+      <tr>
+        <td><button type="button" name="1" onclick="cal(this.name)">1</button></td>
+        <td><button type="button" name="2" onclick="cal(this.name)">2</button></td>
+        <td><button type="button" name="3" onclick="cal(this.name)">3</button></td>
+
+      </tr>
+      <tr>
+        <td><button type="button" name="4" onclick="cal(this.name)">4</button></td>
+        <td><button type="button" name="5" onclick="cal(this.name)">5</button></td>
+        <td><button type="button" name="6" onclick="cal(this.name)">6</button></td>
+
+      </tr>
+      <tr>
+        <td><button type="button" name="7" onclick="cal(this.name)">7</button></td>
+        <td><button type="button" name="8" onclick="cal(this.name)">8</button></td>
+        <td><button type="button" name="9" onclick="cal(this.name)">9</button></td>
+
+      </tr>
+      <tr>
+        <td><button type="button" name="0" onclick="cal(this.name)">0</button></td>
+        <td><button type="button" name="+" onclick="cal(this.name)">+</button></td>
+        <td><button type="button" name="-" onclick="">-</button></td>
+
+      </tr>
+      <tr>
+        <td><button type="button" name="*" onclick="cal(this.name)">*</button></td>
+        <td><button type="button" name="/" onclick="cal(this.name)">/</button></td>
+        <td><button type="button" name="=" onclick="showRes()">=</button></td>
+
+      </tr>
+    </table>
+  </body>
+  <script type="text/javascript">
+    function cal(n){
+      window.val = document.getElementById("show");
+      val.innerHTML = val.innerHTML+n;
+
+
+    }
+    function showRes(){
+      var val2 = val.innerHTML;
+      if(val2.indexOf("+") > 0){
+        var sign= val2.indexOf('+');
+        var v1= Number(val2.slice(0,sign));
+        var v2= Number(val2.slice((sign+1),val2.length));
+        val.innerHTML = v1+v2;
+      }
+      if(val2.indexOf("-") > 0){
+        var sign= val2.indexOf('-');
+        var v1= Number(val2.slice(0,sign));
+        var v2= Number(val2.slice((sign+1),val2.length));
+        val.innerHTML = v1-v2;
+      }
+      if(val2.indexOf("*") > 0){
+        var sign= val2.indexOf('*');
+        var v1= Number(val2.slice(0,sign));
+        var v2= Number(val2.slice((sign+1),val2.length));
+        val.innerHTML = v1*v2;
+      }
+      if(val2.indexOf("/") > 0){
+        var sign= val2.indexOf('/');
+        var v1= Number(val2.slice(0,sign));
+        var v2= Number(val2.slice((sign+1),val2.length));
+        val.innerHTML = v1/v2;
+      }
+
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+</html>

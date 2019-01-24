@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JS Object</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      1.CD Name: <input type="text" name="" value="" id='nme'><br>
+      2.CD Publisher: <input type="text" name="" value="" id='pub'><br>
+      3. CD Price: <input type="text" name="" value="" id='price'>
+      <br><br>
+      <button type="button" name="button" onclick="display()">display The details</button>
+    </form><br>
+    <br>
+    <span id='res'></span>
+  </body>
+  <script type="text/javascript">
+    function display(){
+      var  price =Number(document.getElementById('price').value);
+      price = price+ price*0.1+ price*0.03;
+
+      var cd={
+        name: document.getElementById('nme').value ,
+        pub: document.getElementById('pub').value,
+        mrp: price,
+      }
+    //  console.log(cd);
+
+    document.getElementById('res').innerHTML = cd.name+" "+cd.pub+" "+cd.mrp;
+    }
+  </script>
+</html>

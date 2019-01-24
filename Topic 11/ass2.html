@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Find Largest No</title>
+  </head>
+  <body>
+  Enter the Number with seperated with spaces: <input type="text" name="" id="no" value=""><br><br>
+    <button type="button" name="button" onclick="findLarge()">Find Largest</button><br><br>
+    <span id="res"></span>
+  </body>
+  <script type="text/javascript">
+    function findLarge(){
+      var val= document.getElementById('no').value;
+      var nArr = val.split(" ");
+      var max= nArr[0];
+      for(var i=1;i<nArr.length;i++){
+        if(nArr[i]>max)
+          max=nArr[i];
+      }
+      document.getElementById('res').innerHTML = max;
+    }
+  </script>
+</html>

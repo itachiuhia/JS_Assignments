@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Generate Prime No</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style media="screen">
+      body{
+        margin: 20px;
+      }
+      /* div{
+        display:flex;
+      } */
+      p{
+        display: inline;
+        margin: 5px;
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="display-3">Prime Number<h1>
+    <div id="prime">
+      <input type="text" name="" value="" id='prm' required>
+      <button type="button" name="button" onclick="genPrime()" class="btn btn-warning">Generate Prime</button>
+      <br><br>
+      <span id=""></span>
+      <div class=""id="res">
+
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    function genPrime(){
+      var no = document.getElementById('prm').value;
+      for(var i=1;i<no;i++){
+        var counter = false;
+        for(var j=2;j<=(i/2);j++){
+          if(i%j==0){
+            counter = true;
+            break;
+          }
+        }
+        if(counter== false){
+          var element = document.getElementById("res");
+          var para = document.createElement("p");
+          para.innerHTML= i;
+          element.appendChild(para);
+        }
+      }
+    }
+
+  </script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+</html>
